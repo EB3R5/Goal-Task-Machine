@@ -1,0 +1,375 @@
+[
+    {
+        "hierarchy": 2,
+        "action": "Unload",
+        "location": "Trash",
+        "items": "Trash",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:32:08.308942"
+    },
+    {
+        "hierarchy": 4,
+        "action": "Load",
+        "location": "Trash",
+        "items": "Trash",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:32:08.308942"
+    },
+    {
+        "hierarchy": 2,
+        "action": "Unload",
+        "location": "Kitchen",
+        "items": "Dishwasher",
+        "cadence": "Daily",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:37:45.300329"
+    },
+    {
+        "hierarchy": 4,
+        "action": "Load",
+        "location": "Kitchen",
+        "items": "Dishwasher",
+        "cadence": "Daily",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [
+            "Dishes + Dishwasher"
+        ],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:37:45.300329"
+    },
+    {
+        "hierarchy": 5,
+        "action": "Clean",
+        "location": "Kitchen",
+        "items": "DIshwasher",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [
+            "Cascade Pod + Dishes"
+        ],
+        "instructions": "You know what to do",
+        "submission_timestamp": "2024-02-16T17:37:45.300329"
+    },
+    {
+        "hierarchy": 5,
+        "action": "Clean",
+        "location": "Kitchen",
+        "items": "Cabinets",
+        "cadence": "Quarterly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [
+            "Soap Sprayer",
+            "Microfiber Cloths"
+        ],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:37:45.300329"
+    },
+    {
+        "hierarchy": 5,
+        "action": "Clean",
+        "location": "Kitchen",
+        "items": "Fridge",
+        "cadence": "Quarterly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [
+            "Trash Bag",
+            "Soap Sprayer",
+            "Microfiber Cloths"
+        ],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:37:45.300329"
+    },
+    {
+        "hierarchy": 5,
+        "action": "Scrub",
+        "location": "Kitchen",
+        "items": "Cutting Boards",
+        "cadence": "Daily",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [
+            "Soap Sprayer",
+            "2 Microfiber Cloths"
+        ],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:37:45.300329"
+    },
+    {
+        "hierarchy": 7,
+        "action": "Operate",
+        "location": "Kitchen",
+        "items": "Dishwasher",
+        "cadence": "Daily",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:37:45.300329"
+    },
+    {
+        "hierarchy": 10,
+        "action": "Descale",
+        "location": "Kitchen",
+        "items": "Coffee Maker",
+        "cadence": "Monthly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [
+            "Delongi Descaler"
+        ],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:37:45.300329"
+    },
+    {
+        "hierarchy": 10,
+        "action": "Descale",
+        "location": "Kitchen",
+        "items": "Kettle",
+        "cadence": "Monthly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [
+            "Delongi Descaler"
+        ],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:37:45.300329"
+    },
+    {
+        "hierarchy": 5,
+        "action": "Clean",
+        "location": "Closet",
+        "items": "Surfaces",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:37:53.580511"
+    },
+    {
+        "hierarchy": 5,
+        "action": "Clean",
+        "location": "Car",
+        "items": "Surfaces",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [
+            "Armor All Products",
+            "Soal Sprayer",
+            "Vacuum",
+            "Drill Brush",
+            "Squigee"
+        ],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:37:57.302409"
+    },
+    {
+        "hierarchy": 2,
+        "action": "Unload",
+        "location": "Recycling",
+        "items": "Plastic",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:38:01.716238"
+    },
+    {
+        "hierarchy": 2,
+        "action": "Unload",
+        "location": "Recycling",
+        "items": "Glass",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:38:01.716238"
+    },
+    {
+        "hierarchy": 2,
+        "action": "Unload",
+        "location": "Recycling",
+        "items": "Aluminum",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:38:01.716238"
+    },
+    {
+        "hierarchy": 4,
+        "action": "Load",
+        "location": "Recycling",
+        "items": "Plastic",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [
+            "Green Bin"
+        ],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:38:01.716238"
+    },
+    {
+        "hierarchy": 4,
+        "action": "Load",
+        "location": "Recycling",
+        "items": "Glass",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [
+            "Black Bin"
+        ],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:38:01.716238"
+    },
+    {
+        "hierarchy": 4,
+        "action": "Load",
+        "location": "Recycling",
+        "items": "Aluminum",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [
+            "White Bin"
+        ],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:38:01.716238"
+    },
+    {
+        "hierarchy": 2,
+        "action": "Unload",
+        "location": "Trash",
+        "items": "Trash",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:38:04.973720"
+    },
+    {
+        "hierarchy": 4,
+        "action": "Load",
+        "location": "Trash",
+        "items": "Trash",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:38:04.973720"
+    },
+    {
+        "hierarchy": 1,
+        "action": "Organize",
+        "location": "Kitchen",
+        "items": "",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [
+            "Dishes",
+            "Pots",
+            "Pans",
+            "Silverware",
+            "Bags",
+            "Pantry Items",
+            "Oils",
+            "Vitamix",
+            "Soda Stream"
+        ],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:45:35.501380"
+    },
+    {
+        "hierarchy": 3,
+        "action": "Vacuum",
+        "location": "Kitchen",
+        "items": "",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [
+            "HardFloor Appliance"
+        ],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:45:35.501380"
+    },
+    {
+        "hierarchy": 1,
+        "action": "Organize",
+        "location": "Den",
+        "items": "",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [
+            "Paper Items",
+            "Fasteners",
+            "Cables"
+        ],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:45:43.515766"
+    },
+    {
+        "hierarchy": 3,
+        "action": "Vacuum",
+        "location": "Den",
+        "items": "",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [
+            "Carpet Appliance"
+        ],
+        "instructions": "",
+        "submission_timestamp": "2024-02-16T17:45:43.515766"
+    }
+]

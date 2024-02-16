@@ -1,0 +1,25 @@
+Organize - Kitchen -  - Dishes, Pots, Pans, Silverware, Bags, Pantry Items, Oils, Vitamix, Soda Stream - 
+Organize - Den -  - Paper Items, Fasteners, Cables - 
+Unload - Trash - Trash -  - 
+Unload - Kitchen - Dishwasher -  - 
+Unload - Recycling - Plastic -  - 
+Unload - Recycling - Glass -  - 
+Unload - Recycling - Aluminum -  - 
+Unload - Trash - Trash -  - 
+Vacuum - Kitchen -  - HardFloor Appliance - 
+Vacuum - Den -  - Carpet Appliance - 
+Load - Trash - Trash -  - 
+Load - Kitchen - Dishwasher - Dishes + Dishwasher - 
+Load - Recycling - Plastic - Green Bin - 
+Load - Recycling - Glass - Black Bin - 
+Load - Recycling - Aluminum - White Bin - 
+Load - Trash - Trash -  - 
+Clean - Kitchen - DIshwasher - Cascade Pod + Dishes - You know what to do
+Clean - Kitchen - Cabinets - Soap Sprayer, Microfiber Cloths - 
+Clean - Kitchen - Fridge - Trash Bag, Soap Sprayer, Microfiber Cloths - 
+Scrub - Kitchen - Cutting Boards - Soap Sprayer, 2 Microfiber Cloths - 
+Clean - Closet - Surfaces -  - 
+Clean - Car - Surfaces - Armor All Products, Soal Sprayer, Vacuum, Drill Brush, Squigee - 
+Operate - Kitchen - Dishwasher -  - 
+Descale - Kitchen - Coffee Maker - Delongi Descaler - 
+Descale - Kitchen - Kettle - Delongi Descaler - 
