@@ -1,0 +1,46 @@
+[
+    {
+        "hierarchy": 9,
+        "action": "Batch",
+        "location": "Closet",
+        "items": "Clothes",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [
+            "Clothing Bags",
+            "Belt Bin",
+            "T Shirt Bag",
+            "Underwear Socks Bag",
+            "Table"
+        ],
+        "instructions": "(Socks, Underwear, Pants, Belt, Shirt, Shirt) + (Gym Shorts, Shirt, Socks, Silicon Loofa)"
+    },
+    {
+        "hierarchy": 9,
+        "action": "Batch",
+        "location": "Closet",
+        "items": "Sheets",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [
+            "Sheets Bags"
+        ],
+        "instructions": "(Cover sheets+4 pillow cases+towel+Hand Towel+ microfiber towel while)"
+    },
+    {
+        "hierarchy": 9,
+        "action": "Batch",
+        "location": "Closet",
+        "items": "Towels",
+        "cadence": "Weekly",
+        "description": "",
+        "time": "",
+        "condition": "",
+        "equipment": [],
+        "instructions": ""
+    }
+]
