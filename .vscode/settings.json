@@ -1,0 +1,12 @@
+{
+    "atlascode.jira.jqlList": [
+        {
+            "id": "a03b01ad-2f21-4899-8293-c0e4cd66e718",
+            "siteId": "a91116e3-e125-48cd-bf72-233c0a9248a1",
+            "name": "Goal Task Machine",
+            "query": "PROJECT IN (GTM) AND ISSUETYPE IN (\"Sub-task\", \"Task\")",
+            "enabled": true,
+            "monitor": true
+        }
+    ]
+}
