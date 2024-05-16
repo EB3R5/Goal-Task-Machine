@@ -12,8 +12,11 @@ def connect_db():
     print("Loaded config:", config)  # Debugging output
     
     # Read environment variables for sensitive information
-    username = os.getenv('MONGO_USERNAME')
-    password = os.getenv('MONGO_PASSWORD')
+    username = os.getenv('christianebers1')
+    password = os.getenv('Lincoln6840!')
+    
+    if not username or not password:
+        raise ValueError("Username or password environment variables are not set.")
     
     # Replace placeholders with actual values
     db_uri = config['database']['uri'].replace('<username>', username).replace('<password>', password)
