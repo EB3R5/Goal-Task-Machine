@@ -1,0 +1,683 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAA1D4492BF7C1A500F527E7 /* goaltaskmachineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA1D4482BF7C1A500F527E7 /* goaltaskmachineApp.swift */; };
+		AAA1D44B2BF7C1A500F527E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA1D44A2BF7C1A500F527E7 /* ContentView.swift */; };
+		AAA1D44D2BF7C1A600F527E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAA1D44C2BF7C1A600F527E7 /* Assets.xcassets */; };
+		AAA1D4512BF7C1A600F527E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAA1D4502BF7C1A600F527E7 /* Preview Assets.xcassets */; };
+		AAA1D45B2BF7C1A700F527E7 /* goaltaskmachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA1D45A2BF7C1A700F527E7 /* goaltaskmachineTests.swift */; };
+		AAA1D4652BF7C1A700F527E7 /* goaltaskmachineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA1D4642BF7C1A700F527E7 /* goaltaskmachineUITests.swift */; };
+		AAA1D4672BF7C1A700F527E7 /* goaltaskmachineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA1D4662BF7C1A700F527E7 /* goaltaskmachineUITestsLaunchTests.swift */; };
+		AAA52D972BF7C42700F81EB7 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA52D962BF7C42700F81EB7 /* config.swift */; };
+		AAA52D992BF7C49200F81EB7 /* MongoDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA52D982BF7C49200F81EB7 /* MongoDBManager.swift */; };
+		AAA52D9E2BF7CB8900F81EB7 /* MongoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AAA52D9D2BF7CB8900F81EB7 /* MongoSwift */; };
+		AAA52DA02BF7CB8900F81EB7 /* MongoSwiftSync in Frameworks */ = {isa = PBXBuildFile; productRef = AAA52D9F2BF7CB8900F81EB7 /* MongoSwiftSync */; };
+		AAA52DA22BF7CBB700F81EB7 /* MongoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AAA52DA12BF7CBB700F81EB7 /* MongoSwift */; };
+		AAA52DA42BF7CBB700F81EB7 /* MongoSwiftSync in Frameworks */ = {isa = PBXBuildFile; productRef = AAA52DA32BF7CBB700F81EB7 /* MongoSwiftSync */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AAA1D4572BF7C1A700F527E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAA1D43D2BF7C1A500F527E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAA1D4442BF7C1A500F527E7;
+			remoteInfo = goaltaskmachine;
+		};
+		AAA1D4612BF7C1A700F527E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAA1D43D2BF7C1A500F527E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAA1D4442BF7C1A500F527E7;
+			remoteInfo = goaltaskmachine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AAA1D4452BF7C1A500F527E7 /* goaltaskmachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goaltaskmachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAA1D4482BF7C1A500F527E7 /* goaltaskmachineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goaltaskmachineApp.swift; sourceTree = "<group>"; };
+		AAA1D44A2BF7C1A500F527E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AAA1D44C2BF7C1A600F527E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAA1D44E2BF7C1A600F527E7 /* goaltaskmachine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = goaltaskmachine.entitlements; sourceTree = "<group>"; };
+		AAA1D4502BF7C1A600F527E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AAA1D4562BF7C1A700F527E7 /* goaltaskmachineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goaltaskmachineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAA1D45A2BF7C1A700F527E7 /* goaltaskmachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goaltaskmachineTests.swift; sourceTree = "<group>"; };
+		AAA1D4602BF7C1A700F527E7 /* goaltaskmachineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goaltaskmachineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAA1D4642BF7C1A700F527E7 /* goaltaskmachineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goaltaskmachineUITests.swift; sourceTree = "<group>"; };
+		AAA1D4662BF7C1A700F527E7 /* goaltaskmachineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goaltaskmachineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AAA52D962BF7C42700F81EB7 /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		AAA52D982BF7C49200F81EB7 /* MongoDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MongoDBManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAA1D4422BF7C1A500F527E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA52DA02BF7CB8900F81EB7 /* MongoSwiftSync in Frameworks */,
+				AAA52D9E2BF7CB8900F81EB7 /* MongoSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAA1D4532BF7C1A700F527E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA52DA42BF7CBB700F81EB7 /* MongoSwiftSync in Frameworks */,
+				AAA52DA22BF7CBB700F81EB7 /* MongoSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAA1D45D2BF7C1A700F527E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAA1D43C2BF7C1A500F527E7 = {
+			isa = PBXGroup;
+			children = (
+				AAA1D4472BF7C1A500F527E7 /* goaltaskmachine */,
+				AAA1D4592BF7C1A700F527E7 /* goaltaskmachineTests */,
+				AAA1D4632BF7C1A700F527E7 /* goaltaskmachineUITests */,
+				AAA1D4462BF7C1A500F527E7 /* Products */,
+				AAA52D9C2BF7CB8900F81EB7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AAA1D4462BF7C1A500F527E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAA1D4452BF7C1A500F527E7 /* goaltaskmachine.app */,
+				AAA1D4562BF7C1A700F527E7 /* goaltaskmachineTests.xctest */,
+				AAA1D4602BF7C1A700F527E7 /* goaltaskmachineUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAA1D4472BF7C1A500F527E7 /* goaltaskmachine */ = {
+			isa = PBXGroup;
+			children = (
+				AAA1D4482BF7C1A500F527E7 /* goaltaskmachineApp.swift */,
+				AAA1D44A2BF7C1A500F527E7 /* ContentView.swift */,
+				AAA52D962BF7C42700F81EB7 /* config.swift */,
+				AAA52D982BF7C49200F81EB7 /* MongoDBManager.swift */,
+				AAA1D44C2BF7C1A600F527E7 /* Assets.xcassets */,
+				AAA1D44E2BF7C1A600F527E7 /* goaltaskmachine.entitlements */,
+				AAA1D44F2BF7C1A600F527E7 /* Preview Content */,
+			);
+			path = goaltaskmachine;
+			sourceTree = "<group>";
+		};
+		AAA1D44F2BF7C1A600F527E7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AAA1D4502BF7C1A600F527E7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AAA1D4592BF7C1A700F527E7 /* goaltaskmachineTests */ = {
+			isa = PBXGroup;
+			children = (
+				AAA1D45A2BF7C1A700F527E7 /* goaltaskmachineTests.swift */,
+			);
+			path = goaltaskmachineTests;
+			sourceTree = "<group>";
+		};
+		AAA1D4632BF7C1A700F527E7 /* goaltaskmachineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AAA1D4642BF7C1A700F527E7 /* goaltaskmachineUITests.swift */,
+				AAA1D4662BF7C1A700F527E7 /* goaltaskmachineUITestsLaunchTests.swift */,
+			);
+			path = goaltaskmachineUITests;
+			sourceTree = "<group>";
+		};
+		AAA52D9C2BF7CB8900F81EB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAA1D4442BF7C1A500F527E7 /* goaltaskmachine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAA1D46A2BF7C1A700F527E7 /* Build configuration list for PBXNativeTarget "goaltaskmachine" */;
+			buildPhases = (
+				AAA1D4412BF7C1A500F527E7 /* Sources */,
+				AAA1D4422BF7C1A500F527E7 /* Frameworks */,
+				AAA1D4432BF7C1A500F527E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = goaltaskmachine;
+			packageProductDependencies = (
+				AAA52D9D2BF7CB8900F81EB7 /* MongoSwift */,
+				AAA52D9F2BF7CB8900F81EB7 /* MongoSwiftSync */,
+			);
+			productName = goaltaskmachine;
+			productReference = AAA1D4452BF7C1A500F527E7 /* goaltaskmachine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AAA1D4552BF7C1A700F527E7 /* goaltaskmachineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAA1D46D2BF7C1A700F527E7 /* Build configuration list for PBXNativeTarget "goaltaskmachineTests" */;
+			buildPhases = (
+				AAA1D4522BF7C1A700F527E7 /* Sources */,
+				AAA1D4532BF7C1A700F527E7 /* Frameworks */,
+				AAA1D4542BF7C1A700F527E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAA1D4582BF7C1A700F527E7 /* PBXTargetDependency */,
+			);
+			name = goaltaskmachineTests;
+			packageProductDependencies = (
+				AAA52DA12BF7CBB700F81EB7 /* MongoSwift */,
+				AAA52DA32BF7CBB700F81EB7 /* MongoSwiftSync */,
+			);
+			productName = goaltaskmachineTests;
+			productReference = AAA1D4562BF7C1A700F527E7 /* goaltaskmachineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AAA1D45F2BF7C1A700F527E7 /* goaltaskmachineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAA1D4702BF7C1A700F527E7 /* Build configuration list for PBXNativeTarget "goaltaskmachineUITests" */;
+			buildPhases = (
+				AAA1D45C2BF7C1A700F527E7 /* Sources */,
+				AAA1D45D2BF7C1A700F527E7 /* Frameworks */,
+				AAA1D45E2BF7C1A700F527E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAA1D4622BF7C1A700F527E7 /* PBXTargetDependency */,
+			);
+			name = goaltaskmachineUITests;
+			productName = goaltaskmachineUITests;
+			productReference = AAA1D4602BF7C1A700F527E7 /* goaltaskmachineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAA1D43D2BF7C1A500F527E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					AAA1D4442BF7C1A500F527E7 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					AAA1D4552BF7C1A700F527E7 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = AAA1D4442BF7C1A500F527E7;
+					};
+					AAA1D45F2BF7C1A700F527E7 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = AAA1D4442BF7C1A500F527E7;
+					};
+				};
+			};
+			buildConfigurationList = AAA1D4402BF7C1A500F527E7 /* Build configuration list for PBXProject "goaltaskmachine" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAA1D43C2BF7C1A500F527E7;
+			packageReferences = (
+				AAA1D4732BF7C25500F527E7 /* XCRemoteSwiftPackageReference "mongo-swift-driver" */,
+			);
+			productRefGroup = AAA1D4462BF7C1A500F527E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAA1D4442BF7C1A500F527E7 /* goaltaskmachine */,
+				AAA1D4552BF7C1A700F527E7 /* goaltaskmachineTests */,
+				AAA1D45F2BF7C1A700F527E7 /* goaltaskmachineUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAA1D4432BF7C1A500F527E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA1D4512BF7C1A600F527E7 /* Preview Assets.xcassets in Resources */,
+				AAA1D44D2BF7C1A600F527E7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAA1D4542BF7C1A700F527E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAA1D45E2BF7C1A700F527E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAA1D4412BF7C1A500F527E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA52D992BF7C49200F81EB7 /* MongoDBManager.swift in Sources */,
+				AAA1D44B2BF7C1A500F527E7 /* ContentView.swift in Sources */,
+				AAA1D4492BF7C1A500F527E7 /* goaltaskmachineApp.swift in Sources */,
+				AAA52D972BF7C42700F81EB7 /* config.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAA1D4522BF7C1A700F527E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA1D45B2BF7C1A700F527E7 /* goaltaskmachineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAA1D45C2BF7C1A700F527E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA1D4672BF7C1A700F527E7 /* goaltaskmachineUITestsLaunchTests.swift in Sources */,
+				AAA1D4652BF7C1A700F527E7 /* goaltaskmachineUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAA1D4582BF7C1A700F527E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAA1D4442BF7C1A500F527E7 /* goaltaskmachine */;
+			targetProxy = AAA1D4572BF7C1A700F527E7 /* PBXContainerItemProxy */;
+		};
+		AAA1D4622BF7C1A700F527E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAA1D4442BF7C1A500F527E7 /* goaltaskmachine */;
+			targetProxy = AAA1D4612BF7C1A700F527E7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AAA1D4682BF7C1A700F527E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AAA1D4692BF7C1A700F527E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		AAA1D46B2BF7C1A700F527E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = goaltaskmachine/goaltaskmachine.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"goaltaskmachine/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = christianebers.goaltaskmachine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAA1D46C2BF7C1A700F527E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = goaltaskmachine/goaltaskmachine.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"goaltaskmachine/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = christianebers.goaltaskmachine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AAA1D46E2BF7C1A700F527E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = christianebers.goaltaskmachineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goaltaskmachine.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/goaltaskmachine";
+			};
+			name = Debug;
+		};
+		AAA1D46F2BF7C1A700F527E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = christianebers.goaltaskmachineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goaltaskmachine.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/goaltaskmachine";
+			};
+			name = Release;
+		};
+		AAA1D4712BF7C1A700F527E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = christianebers.goaltaskmachineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = goaltaskmachine;
+			};
+			name = Debug;
+		};
+		AAA1D4722BF7C1A700F527E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = christianebers.goaltaskmachineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = goaltaskmachine;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAA1D4402BF7C1A500F527E7 /* Build configuration list for PBXProject "goaltaskmachine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAA1D4682BF7C1A700F527E7 /* Debug */,
+				AAA1D4692BF7C1A700F527E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAA1D46A2BF7C1A700F527E7 /* Build configuration list for PBXNativeTarget "goaltaskmachine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAA1D46B2BF7C1A700F527E7 /* Debug */,
+				AAA1D46C2BF7C1A700F527E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAA1D46D2BF7C1A700F527E7 /* Build configuration list for PBXNativeTarget "goaltaskmachineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAA1D46E2BF7C1A700F527E7 /* Debug */,
+				AAA1D46F2BF7C1A700F527E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAA1D4702BF7C1A700F527E7 /* Build configuration list for PBXNativeTarget "goaltaskmachineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAA1D4712BF7C1A700F527E7 /* Debug */,
+				AAA1D4722BF7C1A700F527E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AAA1D4732BF7C25500F527E7 /* XCRemoteSwiftPackageReference "mongo-swift-driver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mongodb/mongo-swift-driver";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AAA52D9D2BF7CB8900F81EB7 /* MongoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAA1D4732BF7C25500F527E7 /* XCRemoteSwiftPackageReference "mongo-swift-driver" */;
+			productName = MongoSwift;
+		};
+		AAA52D9F2BF7CB8900F81EB7 /* MongoSwiftSync */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAA1D4732BF7C25500F527E7 /* XCRemoteSwiftPackageReference "mongo-swift-driver" */;
+			productName = MongoSwiftSync;
+		};
+		AAA52DA12BF7CBB700F81EB7 /* MongoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAA1D4732BF7C25500F527E7 /* XCRemoteSwiftPackageReference "mongo-swift-driver" */;
+			productName = MongoSwift;
+		};
+		AAA52DA32BF7CBB700F81EB7 /* MongoSwiftSync */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAA1D4732BF7C25500F527E7 /* XCRemoteSwiftPackageReference "mongo-swift-driver" */;
+			productName = MongoSwiftSync;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AAA1D43D2BF7C1A500F527E7 /* Project object */;
+}
