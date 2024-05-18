@@ -1,86 +1,116 @@
-import MongoSwiftSync
 import Foundation
+import RealmSwift
 
-class MongoDBManager {
-    static let shared = MongoDBManager()
-    private var client: MongoClient?
+class RealmManager {
+    static let shared = RealmManager()
+    private var app: App
+    private var realm: Realm?
 
     private init() {
-        do {
-            client = try MongoClient(Config.mongoDBURI)
-        } catch {
-            print("Failed to create MongoClient: \(error)")
+        let appId = "application-0-qedim" // Replace with your MongoDB Realm App ID
+        app = App(id: appId)
+    }
+    
+    func login(email: String, password: String, completion: @escaping (Result<User, Error>) -> Void) {
+        let credentials = Credentials.emailPassword(email: email, password: password)
+        app.login(credentials: credentials) { result in
+            switch result {
+            case .success(let user):
+                self.setupRealm(for: user)
+                completion(.success(user))
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }
     }
-
-    func connectDB() -> MongoDatabase? {
-        guard let client = client else {
-            return nil
+    
+    private func setupRealm(for user: User) {
+        let configuration = user.configuration(partitionValue: "your-partition-value") // Replace with your partition value if needed
+        do {
+            realm = try Realm(configuration: configuration)
+        } catch let error as NSError {
+            print("Error initializing Realm: \(error.localizedDescription)")
         }
-        return client.db("goaltaskmachine")
     }
 
     func fetchUniqueLocations(completion: @escaping ([String]) -> Void) {
-        guard let db = connectDB() else {
+        guard let realm = realm else {
+            print("Realm not initialized")
             completion([])
             return
         }
-
-        let collection = db.collection("Actions Ontology")
-        let pipeline: [BSONDocument] = [
-            ["$group": ["_id": "$location"]],
-            ["$sort": ["_id": 1]]
-        ]
-
-        do {
-            var locations: [String] = []
-            let cursor = try collection.aggregate(pipeline)
-            for document in cursor {
-                if let location = document["_id"]?.stringValue {
-                    locations.append(location)
-                }
-            }
-            completion(locations)
-        } catch {
-            print("Failed to fetch locations: \(error)")
+        let locations = realm.objects(ActionOntology.self).compactMap { $0.location }.distinct()
+        completion(Array(locations))
+    }
+    
+    func fetchDataByLocation(location: String, completion: @escaping ([ActionOntology]) -> Void) {
+        guard let realm = realm else {
+            print("Realm not initialized")
             completion([])
+            return
         }
+        let data = realm.objects(ActionOntology.self).filter("location == %@", location)
+        completion(Array(data))
     }
 
-    func fetchDataByLocation(location: String, completion: @escaping ([BSONDocument]) -> Void) {
-        guard let db = connectDB() else {
-            completion([])
+    // Create or Update an ActionOntology object
+    func addOrUpdateActionOntology(actionOntology: ActionOntology) {
+        guard let realm = realm else {
+            print("Realm not initialized")
             return
         }
-
-        let collection = db.collection("Actions Ontology")
         do {
-            var documents: [BSONDocument] = []
-            let cursor = try collection.find(["location": BSON(location)])
-            for document in cursor {
-                documents.append(document)
+            try realm.write {
+                realm.add(actionOntology, update: .modified)
             }
-            completion(documents)
-        } catch {
-            print("Failed to fetch data for location \(location): \(error)")
-            completion([])
+        } catch let error as NSError {
+            print("Error adding or updating ActionOntology: \(error.localizedDescription)")
         }
     }
-
-    func addDocumentToMongo(data: [String: Any], completion: @escaping (Bool) -> Void) {
-        guard let db = connectDB() else {
-            completion(false)
+    
+    // Retrieve an ActionOntology object by its primary key (_id)
+    func getActionOntologyById(_id: ObjectId) -> ActionOntology? {
+        guard let realm = realm else {
+            print("Realm not initialized")
+            return nil
+        }
+        return realm.object(ofType: ActionOntology.self, forPrimaryKey: _id)
+    }
+    
+    // Retrieve all ActionOntology objects
+    func getAllActionOntologies() -> Results<ActionOntology>? {
+        guard let realm = realm else {
+            print("Realm not initialized")
+            return nil
+        }
+        return realm.objects(ActionOntology.self)
+    }
+    
+    // Delete an ActionOntology object
+    func deleteActionOntology(actionOntology: ActionOntology) {
+        guard let realm = realm else {
+            print("Realm not initialized")
             return
         }
-
-        let collection = db.collection("done")
         do {
-            let bsonData = BSONDocument(data.mapValues { BSON($0 as! Int) })
-            try collection.insertOne(bsonData)
-            completion(true)
-        } catch {
-            print("Failed to add document: \(error)")
-            completion(false)
+            try realm.write {
+                realm.delete(actionOntology)
+            }
+        } catch let error as NSError {
+            print("Error deleting ActionOntology: \(error.localizedDescription)")
+        }
+    }
+    
+    // Delete an ActionOntology object by its primary key (_id)
+    func deleteActionOntologyById(_id: ObjectId) {
+        guard let realm = realm else {
+            print("Realm not initialized")
+            return
+        }
+        if let actionOntology = getActionOntologyById(_id: _id) {
+            deleteActionOntology(actionOntology: actionOntology)
+        } else {
+            print("ActionOntology with id \(_id) not found")
         }
     }
 }

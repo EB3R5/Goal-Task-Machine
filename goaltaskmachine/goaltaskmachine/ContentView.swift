@@ -1,49 +1,68 @@
 import SwiftUI
-import MongoSwiftSync
+import RealmSwift
 
 struct ContentView: View {
     @State private var locations: [String] = []
-    @State private var data: [BSONDocument] = []
+    @State private var data: [ActionOntology] = []
     @State private var selectedLocation: String?
+    @State private var showingAddDocumentView = false
+    @State private var isLoading = true
 
     var body: some View {
         NavigationView {
-            VStack {
-                List(locations, id: \.self) { location in
-                    Button(action: {
-                        fetchData(for: location)
-                    }) {
-                        Text(location)
-                    }
-                }
-                .navigationBarTitle("Locations")
-
-                if let selectedLocation = selectedLocation {
-                    List(data, id: \.self) { document in
-                        VStack(alignment: .leading) {
-                            Text(document["location"]?.stringValue ?? "")
-                            Text(document["action"]?.stringValue ?? "")
-                            Text(document["details"]?.stringValue ?? "")
-                            Text(document["timestamp"]?.stringValue ?? "")
+            if isLoading {
+                ProgressView("Loading...")
+                    .onAppear {
+                        RealmManager.shared.login(email: "christianebers1", password: "Lincoln6840!") { result in
+                            switch result {
+                            case .failure(let error):
+                                print("Failed to login: \(error.localizedDescription)")
+                            case .success:
+                                fetchLocations()
+                                isLoading = false
+                            }
                         }
                     }
-                    .navigationBarTitle(selectedLocation)
-                }
+            } else {
+                VStack {
+                    List(locations, id: \.self) { location in
+                        Button(action: {
+                            fetchData(for: location)
+                        }) {
+                            Text(location)
+                        }
+                    }
+                    .navigationTitle("Locations")
 
-                Button(action: showAddDocumentWindow) {
-                    Text("Add Document")
+                    if let selectedLocation = selectedLocation {
+                        List(data, id: \.self) { document in
+                            VStack(alignment: .leading) {
+                                Text("Location: \(document.location ?? "")")
+                                Text("Action: \(document.action ?? "")")
+                                Text("Details: \(document.description ?? "")")
+                                Text("Timestamp: \(document.time ?? "")")
+                            }
+                        }
+                        .navigationTitle(selectedLocation)
+                    }
+
+                    Button(action: { showingAddDocumentView.toggle() }) {
+                        Text("Add Document")
+                    }
+                    .padding()
+                    .sheet(isPresented: $showingAddDocumentView) {
+                        AddDocumentView()
+                    }
                 }
-                .padding()
-            }
-            .onAppear {
-                fetchLocations()
             }
         }
     }
 
     private func fetchLocations() {
-        MongoDBManager.shared.fetchUniqueLocations { locations in
+        print("Fetching locations")
+        RealmManager.shared.fetchUniqueLocations { locations in
             DispatchQueue.main.async {
+                print("Fetched locations: \(locations)")
                 self.locations = locations
             }
         }
@@ -51,15 +70,13 @@ struct ContentView: View {
 
     private func fetchData(for location: String) {
         selectedLocation = location
-        MongoDBManager.shared.fetchDataByLocation(location: location) { data in
+        print("Fetching data for location: \(location)")
+        RealmManager.shared.fetchDataByLocation(location: location) { data in
             DispatchQueue.main.async {
+                print("Fetched data for location: \(data)")
                 self.data = data
             }
         }
-    }
-
-    private func showAddDocumentWindow() {
-        // Implement your document addition logic here
     }
 }
 
