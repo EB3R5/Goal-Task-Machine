@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AA117AEE2BF8177C003FC072 /* RealmManager1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA117AED2BF8177C003FC072 /* RealmManager1.swift */; };
+		AA187B132BFE45A500F9BC42 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = AAC213BC2BF812E0002EF486 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AA187B162BFE473900F9BC42 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AA187B152BFE473900F9BC42 /* Lottie */; };
+		AA187B182BFE4B7D00F9BC42 /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = AA187B172BFE4B7D00F9BC42 /* confetti.json */; };
 		AAC2138F2BF8101B002EF486 /* goaltask1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2138E2BF8101B002EF486 /* goaltask1App.swift */; };
 		AAC213912BF8101B002EF486 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC213902BF8101B002EF486 /* ContentView.swift */; };
 		AAC213932BF8101C002EF486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC213922BF8101C002EF486 /* Assets.xcassets */; };
@@ -43,6 +46,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				AA187B132BFE45A500F9BC42 /* RealmSwift in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		AA117AED2BF8177C003FC072 /* RealmManager1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager1.swift; sourceTree = "<group>"; };
+		AA187B172BFE4B7D00F9BC42 /* confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = confetti.json; path = ../../../../../Downloads/confetti.json; sourceTree = "<group>"; };
 		AAC2138B2BF8101B002EF486 /* goaltask1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goaltask1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC2138E2BF8101B002EF486 /* goaltask1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goaltask1App.swift; sourceTree = "<group>"; };
 		AAC213902BF8101B002EF486 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC213BD2BF812E0002EF486 /* RealmSwift in Frameworks */,
+				AA187B162BFE473900F9BC42 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +124,7 @@
 				AAC213902BF8101B002EF486 /* ContentView.swift */,
 				AAC213C02BF81397002EF486 /* RealmModel.swift */,
 				AA117AED2BF8177C003FC072 /* RealmManager1.swift */,
+				AA187B172BFE4B7D00F9BC42 /* confetti.json */,
 				AAC213922BF8101C002EF486 /* Assets.xcassets */,
 				AAC213942BF8101C002EF486 /* goaltask1.entitlements */,
 				AAC213952BF8101C002EF486 /* Preview Content */,
@@ -169,6 +176,7 @@
 			name = goaltask1;
 			packageProductDependencies = (
 				AAC213BC2BF812E0002EF486 /* RealmSwift */,
+				AA187B152BFE473900F9BC42 /* Lottie */,
 			);
 			productName = goaltask1;
 			productReference = AAC2138B2BF8101B002EF486 /* goaltask1.app */;
@@ -244,6 +252,7 @@
 			mainGroup = AAC213822BF8101B002EF486;
 			packageReferences = (
 				AAC213B92BF812E0002EF486 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				AA187B142BFE473900F9BC42 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = AAC2138C2BF8101B002EF486 /* Products */;
 			projectDirPath = "";
@@ -263,6 +272,7 @@
 			files = (
 				AAC213972BF8101C002EF486 /* Preview Assets.xcassets in Resources */,
 				AAC213932BF8101C002EF486 /* Assets.xcassets in Resources */,
+				AA187B182BFE4B7D00F9BC42 /* confetti.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"goaltask1/Preview Content\"";
+				DEVELOPMENT_TEAM = 9AM3YNMPBS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -486,6 +497,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"goaltask1/Preview Content\"";
+				DEVELOPMENT_TEAM = 9AM3YNMPBS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -641,6 +653,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AA187B142BFE473900F9BC42 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
 		AAC213B92BF812E0002EF486 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -652,6 +672,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AA187B152BFE473900F9BC42 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA187B142BFE473900F9BC42 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		AAC213BC2BF812E0002EF486 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AAC213B92BF812E0002EF486 /* XCRemoteSwiftPackageReference "realm-swift" */;

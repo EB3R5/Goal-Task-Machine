@@ -1,5 +1,6 @@
 import SwiftUI
 import RealmSwift
+import Lottie
 
 struct ContentView: View {
     @StateObject var realmManager = RealmManager()
@@ -13,11 +14,11 @@ struct ContentView: View {
     private let password = "Lincoln6840"
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 if isLoggedIn {
                     TabView {
-                        LocationsView(realmManager: realmManager, selectedLocation: $selectedLocation)
+                        LocationsView(realmManager: realmManager)
                             .tabItem {
                                 Label("Locations", systemImage: "location")
                             }
@@ -62,7 +63,6 @@ struct ContentView: View {
 
 struct LocationsView: View {
     @ObservedObject var realmManager: RealmManager
-    @Binding var selectedLocation: String?
 
     var body: some View {
         VStack {
@@ -70,9 +70,7 @@ struct LocationsView: View {
                 let sortedLocations = locations.sorted() // Sort locations alphabetically
                 List(sortedLocations, id: \.self) { location in
                     NavigationLink(
-                        destination: ActionsView(realmManager: realmManager, location: location),
-                        tag: location,
-                        selection: $selectedLocation
+                        destination: ActionsView(realmManager: realmManager, location: location)
                     ) {
                         Text(location)
                     }
@@ -81,6 +79,7 @@ struct LocationsView: View {
                 Text("No data available")
             }
         }
+        .navigationTitle("Locations")
     }
 }
 
@@ -196,10 +195,12 @@ struct ActionsView: View {
     var location: String
 
     @State private var checklist = [String: Bool]() // To track the state of each checklist item
+    @State private var showConfetti = false // State variable to control confetti animation
 
     var body: some View {
         VStack {
-            if let actions = realmManager.fetchActions(for: location) {
+            if let actionsResults = realmManager.fetchActions(for: location) {
+                let actions = Array(actionsResults)
                 List {
                     ForEach(actions) { action in
                         Section(header: Text(action.action).font(.headline)) {
@@ -216,6 +217,9 @@ struct ActionsView: View {
                                     )) {
                                         Text(equipment)
                                     }
+                                    .onChange(of: checklist[equipment] ?? false) { _ in
+                                        checkAllItems(actions: actions)
+                                    }
                                 }
                             }
                             // Display items as checklist items
@@ -229,6 +233,9 @@ struct ActionsView: View {
                                 )) {
                                     Text(action.items)
                                 }
+                                .onChange(of: checklist[action.items] ?? false) { _ in
+                                    checkAllItems(actions: actions)
+                                }
                             }
                         }
                     }
@@ -236,9 +243,54 @@ struct ActionsView: View {
             } else {
                 Text("No actions available for this location")
             }
+
+            // Confetti animation view
+            if showConfetti {
+                LottieView(name: "confetti", loopMode: .playOnce)
+                    .frame(width: 400, height: 400)
+                    .background(Color.clear)
+                    .onAppear {
+                        print("Confetti animation is shown")
+                    }
+            }
         }
         .navigationTitle(location)
         .padding()
+    }
+
+    // Function to check if all items are checked
+    func checkAllItems(actions: [ActionOntology]) {
+        let allChecked = actions.allSatisfy { action in
+            (action.equipment.allSatisfy { checklist[$0] ?? false }) &&
+            (checklist[action.items] ?? false)
+        }
+
+        if allChecked {
+            print("All items are checked!")
+            showConfetti = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                showConfetti = false
+            }
+        }
+    }
+}
+
+// LottieView for SwiftUI
+struct LottieView: UIViewRepresentable {
+    var name: String
+    var loopMode: LottieLoopMode
+
+    func makeUIView(context: Context) -> UIView {
+        let animationView = LottieAnimationView()
+        let animation = LottieAnimation.named(name)
+        animationView.animation = animation
+        animationView.loopMode = loopMode
+        animationView.play()
+        return animationView
+    }
+
+    func updateUIView(_ uiView: UIView, context: Context) {
+        // No update needed
     }
 }
 
