@@ -2,7 +2,8 @@ import Foundation
 import RealmSwift
 
 class RealmManager: ObservableObject {
-    @Published var localRealm: Realm?
+    
+    private(set) var localRealm: Realm?
     private var app: App?
     private var user: User?
     
@@ -117,17 +118,6 @@ class RealmManager: ObservableObject {
         return localRealm?.objects(ActionOntology.self)
     }
     
-    func fetchLocations() -> [String]? {
-        guard let realm = localRealm else { return nil }
-        let locations = realm.objects(ActionOntology.self).distinct(by: ["location"]).compactMap { $0.location }
-        return Array(Set(locations))
-    }
-
-    func fetchActions(for location: String) -> Results<ActionOntology>? {
-        guard let realm = localRealm else { return nil }
-        return realm.objects(ActionOntology.self).filter("location == %@", location)
-    }
-    
     func updateAction(actionOntology: ActionOntology, with updates: [String: Any]) {
         do {
             try localRealm?.write {
@@ -164,4 +154,5 @@ class RealmManager: ObservableObject {
             print("Failed to add item: \(error)")
         }
     }
+    
 }
