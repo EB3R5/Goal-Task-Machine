@@ -1,0 +1,44 @@
+{
+    "title": "ActionOntology",
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "action": {
+            "bsonType": "string"
+        },
+        "cadence": {
+            "bsonType": "string"
+        },
+        "condition": {
+            "bsonType": "string"
+        },
+        "desc": {
+            "bsonType": "string"
+        },
+        "equipment": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "string"
+            }
+        },
+        "hierarchy": {
+            "bsonType": "int"
+        },
+        "instructions": {
+            "bsonType": "string"
+        },
+        "items": {
+            "bsonType": "string"
+        },
+        "location": {
+            "bsonType": "string"
+        },
+        "time": {
+            "bsonType": "string"
+        }
+    },
+    "required": [
+        "_id"
+    ]
+}

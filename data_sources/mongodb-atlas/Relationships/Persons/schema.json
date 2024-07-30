@@ -1,0 +1,23 @@
+{
+    "title": "Person",
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "alias": {
+            "bsonType": "string"
+        },
+        "first_name": {
+            "bsonType": "string"
+        },
+        "index": {
+            "bsonType": "int"
+        },
+        "last_name": {
+            "bsonType": "string"
+        }
+    },
+    "required": [
+        "_id"
+    ]
+}
